@@ -1,0 +1,5 @@
+/build/
+/dist/*.dll
+/dist/*.so
+/dist/*.dylib
+*.tgz

@@ -1,0 +1,80 @@
+{
+  "name": "@obinexusltd/smalltalk-polycall",
+  "version": "1.0.0",
+  "description": "GNU Smalltalk FFI source binding for libpolycall 1.5",
+  "main": "index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./src/*": "./src/*",
+    "./include/*": "./include/*",
+    "./generated/*": "./generated/*",
+    "./dist/*": "./dist/*",
+    "./examples/*": "./examples/*",
+    "./tests/*": "./tests/*",
+    "./scripts/*": "./scripts/*",
+    "./config": "./smalltalk-polycallrc",
+    "./manifest": "./polycall-binding.json"
+  },
+  "files": [
+    "index.js",
+    "src/",
+    "include/",
+    "generated/",
+    "dist/",
+    "examples/",
+    "tests/",
+    "scripts/",
+    "smalltalk-polycallrc",
+    "polycall-binding.json",
+    "README.md",
+    "TODO.md",
+    "LICENSE"
+  ],
+  "directories": {
+    "lib": "src",
+    "src": "src",
+    "include": "include",
+    "generated": "generated",
+    "dist": "dist",
+    "example": "examples",
+    "test": "tests",
+    "scripts": "scripts"
+  },
+  "scripts": {
+    "build": "node scripts/build-native.js",
+    "test": "node scripts/test-native.js && node tests/package.test.js && node tests/source.test.js && node scripts/test-smalltalk-if-available.js",
+    "test:native": "node scripts/test-native.js",
+    "test:package": "node tests/package.test.js",
+    "test:source": "node tests/source.test.js",
+    "test:smalltalk": "node scripts/test-smalltalk-if-available.js",
+    "verify": "npm test",
+    "prepack": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obinexus/smalltalk-polycall.git"
+  },
+  "keywords": [
+    "libpolycall",
+    "polycall",
+    "smalltalk",
+    "gnu-smalltalk",
+    "ffi",
+    "native"
+  ],
+  "author": "Nnamdi Michael Okpala <okpalan@protonmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/obinexus/smalltalk-polycall/issues"
+  },
+  "homepage": "https://github.com/obinexus/smalltalk-polycall#readme"
+}

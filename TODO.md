@@ -1,14 +1,14 @@
-# TODO — smalltalk-polycall (Smalltalk)
+# TODO — smalltalk-polycall
 
-Status: 🧩 scaffolded adapter for libpolycall 1.5.0. Honestly not yet wired to
-the core — this file tracks the remaining work. Rolled up in
-[../../docs/release/TODO-1.5.md](../../docs/release/TODO-1.5.md).
+Status: implemented GNU Smalltalk adapter and npm source distribution.
 
-- [x] Folder structure, manifest, and `smalltalk-polycallrc` (shared schema)
-- [ ] Locate/generate Smalltalk FFI bindings for `polycall_ffi.h`
-- [ ] Implement the thin adapter in `src/` (idioms -> `polycall_ffi_run_config`)
-- [ ] Add a runnable example under `examples/`
-- [ ] Add a smoke test under `tests/`
-- [ ] Confirm `scripts/verify-dry.sh` passes (no core duplication)
-
-Do not add config parsing or runtime logic here — adapt the core only.
+- [x] Add the generated libpolycall FFI contract and exported native shim.
+- [x] Forward exactly once to `polycall_ffi_run_config(config_path, 1)`.
+- [x] Add GNU Smalltalk `Polycall` and `PolycallError` APIs.
+- [x] Add an example, native mock tests, and optional `gst` parse verification.
+- [x] Add public npm metadata and recursive relative-directory indexes.
+- [x] Add mandatory native, package, and thin-boundary prepack checks.
+- [ ] Run the dialect parse/example on a host with GNU Smalltalk installed.
+- [ ] Exercise the adapter against a production libpolycall 1.5 shared library.
+- [ ] Add separate Pharo/Squeak adapters if those dialects are required.
+- [ ] Publish `@obinexusltd/smalltalk-polycall` after npm authentication is confirmed.
