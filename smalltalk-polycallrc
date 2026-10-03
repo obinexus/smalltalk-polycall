@@ -1,8 +1,11 @@
-# smalltalk-polycallrc - read-only Smalltalk runtime overrides for libpolycall
+# smalltalk-polycallrc - read-only Smalltalk runtime overrides for Polycall
 #
-# This file uses the SHARED polycall schema (src/config/polycall_config_schema.c).
-# It introduces no new keys or parser: the Smalltalk adapter passes this path to
-# the core via the FFI boundary. Values here override polycallrc for Smalltalk.
+# This file uses the SHARED Polycall configuration grammar: the core validates
+# it exactly as `polycall config validate` does, through
+# polycall_ffi_run_config(path, run) (Polycall runConfig: in Smalltalk). It
+# introduces no new keys or parser: the Smalltalk adapter only passes this
+# path to the core across the FFI boundary. Values here override polycallrc
+# for Smalltalk.
 
 log_level=info
 max_connections=1000

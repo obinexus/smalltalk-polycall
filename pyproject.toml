@@ -1,0 +1,15 @@
+# QA descriptor for the Polycall binding matrix (read by polycall/qa/run_qa.py).
+# This repository is NOT a Python package and is not pip-installable;
+# its native manifest is package.json.
+[tool.polycall.binding]
+name = "smalltalk-polycall"
+language = "Smalltalk"
+native_manifest = "package.json"
+registry = "npm"
+package = "@obinexusltd/smalltalk-polycall"
+abi = 1
+support = "supported"
+linux_image = "ubuntu:22.04 (+ apt: gnu-smalltalk gcc pkg-config); npm checks in node:22"
+build = "npm run build"
+test = "sh tests/run-real-core.sh"
+windows_test = ""

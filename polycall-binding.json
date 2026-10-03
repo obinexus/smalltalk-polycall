@@ -1,12 +1,16 @@
 {
   "name": "smalltalk-polycall",
   "package": "@obinexusltd/smalltalk-polycall",
-  "version": "1.5.0",
+  "version": "1.0.0",
   "language": "Smalltalk",
   "adapter": true,
   "ffi": true,
+  "entry_point": "polycall_ffi_run_config",
   "config": "smalltalk-polycallrc",
-  "core": "libpolycall >=1.5.0",
+  "native_manifest": "package.json",
+  "core": "polycall >= 1.1.0 (binding ABI 1)",
+  "core_repository": "https://github.com/obinexus/polycall",
+  "repository": "https://github.com/obinexus/smalltalk-polycall",
   "dialect": "GNU Smalltalk",
   "license": "MIT",
   "author": "Nnamdi Michael Okpala <okpalan@protonmail.com>"
