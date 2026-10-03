@@ -1,5 +1,5 @@
 {
-  "name": "@obinexusltd/smalltalk-polycall",
+  "name": "smalltalk-polycall",
   "version": "1.0.0",
   "description": "GNU Smalltalk binding (C call-outs) for the Polycall C library, binding ABI v1",
   "main": "index.js",

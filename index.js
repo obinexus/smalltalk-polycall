@@ -48,7 +48,7 @@ function resolve(directoryName, ...segments) {
 }
 
 module.exports = Object.freeze({
-  packageName: '@obinexusltd/smalltalk-polycall',
+  packageName: 'smalltalk-polycall',
   projectRoot: __dirname,
   directories,
   resolve,

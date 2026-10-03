@@ -1,6 +1,6 @@
 {
   "name": "smalltalk-polycall",
-  "package": "@obinexusltd/smalltalk-polycall",
+  "package": "smalltalk-polycall",
   "version": "1.0.0",
   "language": "Smalltalk",
   "adapter": true,

@@ -15,4 +15,4 @@ Status: GNU Smalltalk binding over the real Polycall binding ABI v1
 - [x] Public npm metadata and recursive relative-directory indexes.
 - [ ] Run on GNU Smalltalk for Windows / macOS (not available for testing).
 - [ ] Add separate Pharo/Squeak adapters if those dialects are required.
-- [ ] Publish `@obinexusltd/smalltalk-polycall` after npm authentication is confirmed.
+- [ ] Publish `smalltalk-polycall` after npm authentication is confirmed.

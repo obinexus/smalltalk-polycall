@@ -7,7 +7,7 @@ const path = require('node:path');
 const api = require('..');
 const pkg = require('../package.json');
 
-assert.equal(pkg.name, '@obinexusltd/smalltalk-polycall');
+assert.equal(pkg.name, 'smalltalk-polycall');
 assert.equal(pkg.version, '1.0.0');
 assert.equal(pkg.author, 'Nnamdi Michael Okpala <okpalan@protonmail.com>');
 assert.equal(pkg.license, 'MIT');

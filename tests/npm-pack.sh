@@ -25,15 +25,15 @@ npm install --no-audit --no-fund "$T/$TGZ" || exit 1
 node -e '
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
-const pkg = require("@obinexusltd/smalltalk-polycall");
-const meta = require("@obinexusltd/smalltalk-polycall/package.json");
+const pkg = require("smalltalk-polycall");
+const meta = require("smalltalk-polycall/package.json");
 assert.equal(pkg.packageName, meta.name);
 assert.ok(pkg.directories.src.relativeFiles.includes("Polycall.st"));
 assert.equal(pkg.directories.generated, undefined, "the stub generated/ directory is gone");
 for (const f of [pkg.smalltalkSource, pkg.nativeSource, pkg.testSuite, pkg.config]) assert.ok(fs.existsSync(f), f);
 console.log("installed entry point OK:", meta.name, meta.version);
 ' || exit 1
-cd "$T/app/node_modules/@obinexusltd/smalltalk-polycall" || exit 1
+cd "$T/app/node_modules/smalltalk-polycall" || exit 1
 echo "== npm run build in the installed package"
 npm run build || exit 1
 if [ -n "${KEEP_INSTALL_DIR:-}" ]; then

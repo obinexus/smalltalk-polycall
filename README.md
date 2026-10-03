@@ -1,4 +1,4 @@
-# @obinexusltd/smalltalk-polycall
+# smalltalk-polycall
 
 GNU Smalltalk binding for [Polycall](https://github.com/obinexus/polycall):
 the binding ABI v1 of the Polycall C library (`polycall.h`, `libpolycall`),
@@ -118,13 +118,13 @@ npm run build && gst -q src/Polycall.st examples/run.st
 ## Install the npm source package
 
 ```bash
-npm install @obinexusltd/smalltalk-polycall
+npm install smalltalk-polycall
 ```
 
 The CommonJS entry point indexes the source distribution without executing it:
 
 ```js
-const smalltalkPolycall = require('@obinexusltd/smalltalk-polycall');
+const smalltalkPolycall = require('smalltalk-polycall');
 console.log(smalltalkPolycall.directories.src.relativeFiles);
 console.log(smalltalkPolycall.resolve('examples', 'run.st'));
 ```
