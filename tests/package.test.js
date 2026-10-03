@@ -15,7 +15,7 @@ assert.equal(pkg.publishConfig.access, 'public');
 assert.equal(api.packageName, pkg.name);
 
 const directoryKeys = {
-  src: 'src', include: 'include', generated: 'generated', dist: 'dist',
+  src: 'src', include: 'include', dist: 'dist',
   examples: 'example', tests: 'test', scripts: 'scripts'
 };
 for (const [apiKey, packageKey] of Object.entries(directoryKeys)) {
@@ -30,7 +30,7 @@ assert.ok(api.directories.src.relativeFiles.includes('Polycall.st'));
 assert.ok(api.directories.src.relativeFiles.includes('smalltalk_polycall.c'));
 assert.ok(api.directories.examples.relativeFiles.includes('run.st'));
 for (const file of [api.smalltalkSource, api.nativeSource, api.nativeHeader,
-  api.ffiHeader, api.config, api.manifest]) {
+  api.testSuite, api.config, api.manifest]) {
   assert.ok(fs.statSync(file).isFile(), `${file} must exist`);
 }
 assert.throws(() => api.resolve('src', '..', 'package.json'), RangeError);

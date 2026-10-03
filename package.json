@@ -1,7 +1,7 @@
 {
   "name": "@obinexusltd/smalltalk-polycall",
   "version": "1.0.0",
-  "description": "GNU Smalltalk FFI source binding for libpolycall 1.5",
+  "description": "GNU Smalltalk binding (C call-outs) for the Polycall C library, binding ABI v1",
   "main": "index.js",
   "type": "commonjs",
   "exports": {
@@ -9,7 +9,6 @@
     "./package.json": "./package.json",
     "./src/*": "./src/*",
     "./include/*": "./include/*",
-    "./generated/*": "./generated/*",
     "./dist/*": "./dist/*",
     "./examples/*": "./examples/*",
     "./tests/*": "./tests/*",
@@ -21,8 +20,7 @@
     "index.js",
     "src/",
     "include/",
-    "generated/",
-    "dist/",
+    "dist/README.md",
     "examples/",
     "tests/",
     "scripts/",
@@ -36,7 +34,6 @@
     "lib": "src",
     "src": "src",
     "include": "include",
-    "generated": "generated",
     "dist": "dist",
     "example": "examples",
     "test": "tests",
@@ -49,6 +46,7 @@
     "test:package": "node tests/package.test.js",
     "test:source": "node tests/source.test.js",
     "test:smalltalk": "node scripts/test-smalltalk-if-available.js",
+    "test:real": "sh tests/run-real-core.sh",
     "verify": "npm test",
     "prepack": "npm test"
   },

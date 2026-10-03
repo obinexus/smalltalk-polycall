@@ -1,7 +1,13 @@
+/*
+ * MOCK of polycall_ffi_run_config for the adapter unit test of the C shim
+ * (tests/smalltalk_polycall_adapter_test.c). It is NOT the core: the real
+ * library is exercised by tests/PolycallTest.st. The declaration comes from
+ * the real <polycall.h>, so the shim is compiled against the real signature.
+ */
 #include "polycall_ffi_mock.h"
-#include "polycall/polycall_ffi.h"
 
-#include <stdint.h>
+#include <polycall.h>
+
 #include <stdio.h>
 #include <string.h>
 
@@ -27,9 +33,9 @@ const char *polycall_ffi_mock_path(void) {
     return path;
 }
 
-int32_t polycall_ffi_run_config(const char *config_path, int32_t run) {
+int polycall_ffi_run_config(const char *config_path, int run) {
     calls += 1;
-    run_flag = (int)run;
+    run_flag = run;
     (void)snprintf(path, sizeof(path), "%s", config_path == NULL ? "" : config_path);
-    return config_path != NULL && strcmp(config_path, "__status_37__") == 0 ? 37 : 0;
+    return config_path != NULL && strcmp(config_path, "__status_13__") == 0 ? POLYCALL_E_CONFIG : POLYCALL_OK;
 }

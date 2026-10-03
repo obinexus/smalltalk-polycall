@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const relativeDirectories = Object.freeze({
-  src: 'src', include: 'include', generated: 'generated', dist: 'dist',
+  src: 'src', include: 'include', dist: 'dist',
   examples: 'examples', tests: 'tests', scripts: 'scripts'
 });
 
@@ -55,7 +55,7 @@ module.exports = Object.freeze({
   smalltalkSource: path.join(__dirname, 'src', 'Polycall.st'),
   nativeSource: path.join(__dirname, 'src', 'smalltalk_polycall.c'),
   nativeHeader: path.join(__dirname, 'include', 'smalltalk_polycall.h'),
-  ffiHeader: path.join(__dirname, 'generated', 'polycall', 'polycall_ffi.h'),
+  testSuite: path.join(__dirname, 'tests', 'PolycallTest.st'),
   config: path.join(__dirname, 'smalltalk-polycallrc'),
   manifest: path.join(__dirname, 'polycall-binding.json')
 });
